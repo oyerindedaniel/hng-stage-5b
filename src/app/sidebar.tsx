@@ -23,6 +23,19 @@ export default function Sidebar({
     >
       <nav>
         {isAuthenticated ? (
+          <div className="flex flex-col gap-7">
+            {NAV_ITEMS.map((item, index) => (
+              <Link
+                key={index}
+                href={item.link}
+                className="text-[#99999B] hover:bg-[#B15210] p-[10px] hover:text-white hover:rounded-md"
+              >
+                {item.name}
+                {item.hasSubmenu && <span></span>}
+              </Link>
+            ))}
+          </div>
+        ) : (
           <div className="flex flex-col gap-3">
             {Object.entries(SIDEBAR_LINKS).map(
               ([section, links], sectionIndex) => (
@@ -45,19 +58,6 @@ export default function Sidebar({
                 </div>
               )
             )}
-          </div>
-        ) : (
-          <div className="flex flex-col gap-7">
-            {NAV_ITEMS.map((item, index) => (
-              <Link
-                key={index}
-                href={item.link}
-                className="text-[#99999B] hover:bg-[#B15210] p-[10px] hover:text-white hover:rounded-md"
-              >
-                {item.name}
-                {item.hasSubmenu && <span></span>}
-              </Link>
-            ))}
           </div>
         )}
       </nav>
