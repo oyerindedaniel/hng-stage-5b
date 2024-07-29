@@ -53,7 +53,7 @@ export default function Sidebar({
               <Link
                 key={index}
                 href={item.link}
-                className="text-[#99999B] hover:bg-[#B15210] p-[10px] hover:text-white hover:rounded-md"
+                className="text-[#99999B] hover:bg-[#B15210] p-[10px] hover:text-white hover:rounded-md text-sm"
               >
                 {item.name}
                 {item.hasSubmenu && <span></span>}
