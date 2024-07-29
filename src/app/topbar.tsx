@@ -41,7 +41,7 @@ export default function Topbar({
         >
           <span
             className={cn(
-              "block absolute left-0 top-[44%] rounded-lg w-full h-[12%] bg-black group-hover:scale-[0.1]",
+              "block absolute left-0 top-[44%] rounded-lg w-full h-[12%] bg-black group-hover:scale-[0.1] transition-all duration-500 [transition-timing-function:cubic-bezier(0.19, 1, 0.22, 1)]",
               isSideBarOpen ? "scale-[0.1]" : "scale-100"
             )}
           >
