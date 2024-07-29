@@ -4,6 +4,7 @@ import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { SetStateAction } from "react";
 import { NAV_ITEMS, SIDEBAR_LINKS } from "./constants";
+import { Button } from "@/components/ui/button";
 
 export default function Sidebar({
   isSideBarOpen,
@@ -58,6 +59,15 @@ export default function Sidebar({
                 {item.hasSubmenu && <span></span>}
               </Link>
             ))}
+            <div className="flex flex-col gap-5">
+              {" "}
+              <Button variant="outline" size="lg">
+                Log in
+              </Button>
+              <Button variant="default" size="lg">
+                Get Started
+              </Button>
+            </div>
           </div>
         )}
       </nav>
