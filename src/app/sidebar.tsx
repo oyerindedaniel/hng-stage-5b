@@ -17,7 +17,7 @@ export default function Sidebar({
   return (
     <aside
       className={cn(
-        "w-[300px] bg-[#212226] text-[#99999B] z-50 top-0 py-[40px] px-[22px] fixed left-0 h-full transition-transform duration-200",
+        "w-[300px] bg-white text-[#99999B] z-50 top-0 py-[40px] px-[22px] fixed left-0 h-full transition-transform duration-200",
         isSideBarOpen ? "translate-x-0" : "-translate-x-full"
       )}
     >
