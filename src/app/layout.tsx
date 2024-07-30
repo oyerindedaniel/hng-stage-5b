@@ -7,6 +7,7 @@ import Topbar from "./topbar";
 import Sidebar from "./sidebar";
 import { useState } from "react";
 import Overlay from "./overlay";
+import { cn } from "@/lib/utils";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -25,7 +26,7 @@ export default function RootLayout({
 
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={cn("max-w-[1500px] mx-auto", inter.className)}>
         <Topbar
           isSideBarOpen={isSideBarOpen}
           setIsSideBarOpen={setIsSideBarOpen}
@@ -41,7 +42,7 @@ export default function RootLayout({
           isSideBarOpen={isSideBarOpen}
           setIsSideBarOpen={setIsSideBarOpen}
         />
-        {children}
+        <div className="px-8 md:px-16 py-20">{children}</div>
       </body>
     </html>
   );

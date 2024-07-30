@@ -21,10 +21,10 @@ export default function Topbar({
         onClick={() => setIsAuthenticated((prev) => !prev)}
       >
         <p className="flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-3 pt-4 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Switch to {isAuthenticated ? "unauthenticated" : "authenticated"}:
-          <code className="font-mono font-bold">
+          Switch to {isAuthenticated ? "unauthenticated" : "authenticated"}
+          {/* <code className="font-mono font-bold">
             {isAuthenticated.toString()}
-          </code>
+          </code> */}
         </p>
       </div>
       <div

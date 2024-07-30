@@ -45,3 +45,38 @@ export const NAV_ITEMS = [
   { name: "Resources", link: "/resources", hasSubmenu: true }, // Example with a submenu
   { name: "Contact Us", link: "/contact" },
 ];
+
+export const CONTACT_DETAILS = [
+  {
+    icon: Icons.LocationIcon,
+    text: "10111, Hornchurch, London, United Kingdom",
+  },
+  {
+    icon: Icons.PhoneIcon,
+    text: "+4403989898787",
+  },
+  {
+    icon: Icons.MessageIcon,
+    text: "supportteam@gmail.com",
+  },
+  {
+    icon: Icons.TwitterIcon,
+    text: "@boilerplate23",
+  },
+  {
+    icon: Icons.InstagramIcon,
+    text: "@boilerplate234",
+  },
+  {
+    icon: Icons.LinkendinIcon,
+    text: "@boilerplate34",
+  },
+];
+
+export const INQUIRY_TYPES = [
+  { value: "general", name: "General Inquiry" },
+  { value: "media", name: "Media Contact" },
+  { value: "feedback", name: "Feedback" },
+  { value: "subscription", name: "Subscription" },
+  { value: "others", name: "Others" },
+];
