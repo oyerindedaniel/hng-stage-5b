@@ -27,6 +27,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Icons } from "../assets";
 import { Manrope } from "next/font/google";
 import { cn } from "@/lib/utils";
+import { useToast } from "@/components/ui/use-toast";
 
 const manrope = Manrope({ subsets: ["latin"] });
 
@@ -44,6 +45,8 @@ const FormSchema = z.object({
 });
 
 export default function ContactUs() {
+  const { toast } = useToast();
+
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
     defaultValues: {
@@ -54,7 +57,16 @@ export default function ContactUs() {
     },
   });
 
-  const onSubmit = (data: z.infer<typeof FormSchema>) => {};
+  const onSubmit = (data: z.infer<typeof FormSchema>) => {
+    toast({
+      title: "Contact submitted successfully!",
+      description: (
+        <pre className="mt-2 w-[340px] rounded-md bg-slate-950 p-4">
+          <code className="text-white">{JSON.stringify(data, null, 2)}</code>
+        </pre>
+      ),
+    });
+  };
 
   return (
     <main className={cn("w-full", manrope.className)}>

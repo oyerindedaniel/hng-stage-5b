@@ -8,6 +8,7 @@ import Sidebar from "./sidebar";
 import { useState } from "react";
 import Overlay from "./overlay";
 import { cn } from "@/lib/utils";
+import { Toaster } from "@/components/ui/toaster";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -42,7 +43,10 @@ export default function RootLayout({
           isSideBarOpen={isSideBarOpen}
           setIsSideBarOpen={setIsSideBarOpen}
         />
-        <div className="px-8 md:px-16 py-20">{children}</div>
+        <div className="px-8 md:px-16 py-20">
+          {children}
+          <Toaster />
+        </div>
       </body>
     </html>
   );

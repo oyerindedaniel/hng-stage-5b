@@ -15,7 +15,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
-import { toast } from "@/components/ui/use-toast";
+import { useToast } from "@/components/ui/use-toast";
 import { StarRating } from "@/components/star";
 import { Manrope } from "next/font/google";
 import { cn } from "@/lib/utils";
@@ -42,6 +42,8 @@ const FormSchema = z.object({
 });
 
 export default function Feedback() {
+  const { toast } = useToast();
+
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
   });
