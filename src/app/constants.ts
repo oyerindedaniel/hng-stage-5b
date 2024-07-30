@@ -43,7 +43,7 @@ export const NAV_ITEMS = [
   { name: "Pricing", link: "/pricing" },
   { name: "Products", link: "/products" },
   { name: "Resources", link: "/resources", hasSubmenu: true }, // Example with a submenu
-  { name: "Contact Us", link: "/contact" },
+  { name: "Contact Us", link: "/contact-us" },
 ];
 
 export const CONTACT_DETAILS = [
