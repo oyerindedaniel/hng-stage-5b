@@ -74,10 +74,10 @@ export default function Feedback() {
         <h4 className="font-semibold text-xl mb-8">Fill in your details:</h4>
         <Form {...form}>
           <form
-            className="flex flex-col gap-16"
+            className="flex flex-col gap-8 md:gap-16"
             onSubmit={form.handleSubmit(onSubmit)}
           >
-            <div className="flex flex-wrap justify-between gap-8">
+            <div className="flex flex-col md:flex-row justify-between gap-8">
               <FormField
                 control={form.control}
                 name="firstName"
@@ -128,7 +128,7 @@ export default function Feedback() {
                     <RadioGroup
                       onValueChange={field.onChange}
                       value={field.value}
-                      className="flex flex-wrap space-x-6"
+                      className="flex flex-wrap flex-col md:flex-row md:space-x-6 space-y-3 md:space-y-0"
                     >
                       {feedbackOptions.map((option) => (
                         <div
