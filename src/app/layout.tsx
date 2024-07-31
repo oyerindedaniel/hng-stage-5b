@@ -9,6 +9,7 @@ import { useState } from "react";
 import Overlay from "./overlay";
 import { cn } from "@/lib/utils";
 import { Toaster } from "@/components/ui/toaster";
+import Footer from "@/components/footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -47,6 +48,7 @@ export default function RootLayout({
           {children}
           <Toaster />
         </div>
+        <Footer />
       </body>
     </html>
   );
