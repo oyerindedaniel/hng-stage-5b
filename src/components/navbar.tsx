@@ -24,7 +24,7 @@ export default function Navbar() {
       >
         <Menu size={24} />
       </button>
-      <MobileNav open={isOpen} onClose={() => setIsOpen(!isOpen)} />
+      {/* <MobileNav open={isOpen} onClose={() => setIsOpen(!isOpen)} /> */}
     </header>
   );
 }
